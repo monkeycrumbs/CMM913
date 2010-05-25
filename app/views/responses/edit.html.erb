@@ -1,0 +1,27 @@
+<h2>Editing response</h2>
+
+<%= error_messages_for :response %>
+
+<% form_for([@survey, @response]) do |f| %>
+  <p>
+    <b>Survey</b><br />
+    <%= f.text_field :survey_id %>
+  </p>
+
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <b>Ip address</b><br />
+    <%= f.text_field :ip_address %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', survey_response_path(@survey, @response) %> |
+<%= link_to 'Back', survey_responses_path(@survey) %>

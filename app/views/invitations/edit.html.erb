@@ -1,0 +1,17 @@
+<h2>Editing invitation</h2>
+
+<%= error_messages_for :invitation %>
+
+<% form_for([@survey, @invitation]) do |f| %>
+  <p>
+    <b>Email</b><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', survey_invitation_path(@survey, @invitation) %> |
+<%= link_to 'Back', survey_invitations_path(@survey) %>

@@ -1,0 +1,96 @@
+<h2>Results</h2>
+
+<%= link_to 'Export Results',  export_data_survey_result_path(@survey) %>
+
+<% for question in @survey.questions %>
+  <% div_for question, :class => cycle('odd', 'even') do %>
+    <h3><%= question.position%>. <%= question.title %><span class="count"> (<%= question.answers.count %> answers)</span></h3>
+    <p><strong>Question Type:</strong> <%= question.type %></p>
+	  
+	<% if question.type == 'date' %>
+	  <span><strong>Range:</strong> <%= question.list_answers.min %> - <%= question.list_answers.max %></span>
+	<% end %>
+	<% if !question.options.empty? && question.type != 'likert' %>	  
+	  <!-- start frequency table -->
+	  <table>
+	  	<tr class="thead">
+	  		<th><%= question.title %></th>
+			<th>Frequency</th>
+			<th>Percentage</th>
+			<th>Cumulative Percentage</th>
+	  	</tr>
+		<% percentage_total = 0.0 %>
+		<% answer_count = 0 %>
+		<% for option in question.options %>
+		<tr class="<%= cycle("odd", "even") %>">
+			<td><%= option.label %></td>
+			<td><%= option.answers.count %></td>
+			<td><%= percentage(option, question) %></td>
+			<% percentage_total += percentage(option, question).to_f %>
+			<% answer_count += option.answers.count.to_i %>
+			<td><%= percentage_total %>%</td>
+		</tr>
+		<% end %>
+		<tr class="thead">
+			<td>Total</td>
+			<td><%= answer_count %></td>
+			<td><%= percentage_total %>%</td>
+			<td></td>
+		</tr>
+	  </table>
+	  <!-- end frequency table -->
+	  <%= gruff_option_image question %>
+	<% end %>
+	<% if (question.type == 'country') %>
+	  <%= gruff_country_image question %>
+	<% end %>
+	<% if (question.type == 'likert') %>
+	  <!-- begin likert table -->
+	  <table>
+	  	<tr class="thead">
+	  		<th></th>
+			<% likert_labels.each do |label| %>
+	  		  <th><%= label %></th>
+			<% end %>
+	  	</tr>
+		<% question.options.each do |option| %>
+		  <tr class="<%= cycle("odd", "even") %>">
+			<th><%= option.label %></th>
+			<% likert_labels.each do |label| %>
+			  <td><%= option.answers.find_all_by_answer(label).size %></td>
+            <% end %>
+		  </tr>
+		<% end %>
+	  </table><br />
+	  <!-- end likert table -->
+	  <% question.options.each do |option| %>
+ 	    <%= gruff_likert_image option %>
+	  <% end %>
+	<% end %>
+	<!-- begin number question results -->
+	<% if (question.type == 'number') %>
+	  <b>Mean: </b><%= question.answer_mean %>
+	  <b>Mode: </b><%= question.answer_mode %>
+	  <b>Median: </b><%= question.answer_median %>
+	  <b>Total: </b><%= question.answer_total %>
+	  <b>Range: </b><%= question.list_answers.min %> - <%= question.list_answers.max %>
+	<% end %>
+	<% if ['text', 'textarea', 'number'].include? question.type %>
+ 	  <% div_for question, :raw_data do %>
+	    <h4>Raw Data</h4>
+	    <ul>
+	      <% for answer in question.answers %>
+		    <% if !answer.option %>
+		      <li><%= answer.answer %></li>
+		    <% else %>
+		      <li><%= answer.option.label %></li>
+		    <% end %>
+	      <% end %>
+	    </ul>
+      <% end %>
+	  <%= link_to_function('view/hide raw data', nil, :id => "more_link") do |page|
+	    page.visual_effect( :toggle_blind, "raw_data_question_#{question.id}")
+	  end %>
+	<% end %>
+  <% end %>
+<% end %>

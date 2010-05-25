@@ -1,0 +1,37 @@
+response_one:
+  survey: demo_survey
+  id: 1
+  user_id: 1
+  ip_address: 127.0.0.1
+response_two:
+  survey: demo_survey
+  id: 2
+  ip_address: 127.0.0.1
+response_three:
+  survey: demo_survey
+  id: 3
+  ip_address: 127.0.0.1
+response_four:
+  survey: demo_survey
+  id: 4
+  ip_address: 127.0.0.1
+response_five:
+  survey: demo_survey
+  id: 5
+  ip_address: 127.0.0.1
+response_six:
+  survey: demo_survey
+  id: 6
+  ip_address: 127.0.0.1
+response_seven:
+  survey: demo_survey
+  id: 7
+  ip_address: 127.0.0.1
+response_eight:
+  survey: demo_survey
+  id: 8
+  ip_address: 127.0.0.1
+response_nine:
+  survey: demo_survey
+  id: 9
+  ip_address: 127.0.0.1

@@ -1,0 +1,63 @@
+<% if admin? %>
+<h2>Response #<%= @response.id %></h2>
+<p>
+  <b>Survey:</b>
+  <%=h @response.survey_id %>
+</p>
+<% if !@response.user.nil? %>
+  <p>
+    <b>User:</b>
+    <%=h @response.user.login %>
+  </p>
+<% end %>
+<p>
+  <b>Ip address:</b>
+  <%=h @response.ip_address %>
+</p>
+
+
+  <table>
+  <% for @question in @survey.questions %>
+    <tr >
+      <th class="thead">Question:</th>
+      <td style="border-bottom: 1px solid #6096BF"><strong><%= @question.title %></strong></td>
+	  <th style="border-bottom: 1px solid #6096BF"></th>
+	  
+	</tr>
+	<% if answers = @question.answers.find_all_by_response_id(@response.id) %>
+	  <% answers.each do |a|%>
+	    <tr class="<%= cycle('odd', 'even') %>">
+	   
+	      <th></th>
+	      <% if @question.type == 'likert' %>
+		    <td><%= a.option.label %>: <%= a.answer %></td>
+		  <% else %>
+  	        <td><%= answer = a.option ? a.option.label : a.answer %></td>
+		  <% end %>
+		  <td>
+		    <%= link_to 'Show', question_answer_path(@question, a) %>
+            <%= link_to 'Edit', edit_question_answer_path(@question, a) %>
+            <%= link_to 'Destroy', question_answer_path(@question, a), :confirm => 'Are you sure?', :method => :delete %>
+		  </td>
+		
+		</tr>  
+	  <% end %>
+	<% else %>
+	  <td>No Response</td>
+	<% end %>
+  <% end %>
+  </table>    
+
+
+
+<%= link_to 'Edit', edit_survey_response_path(@survey, @response) %> |
+<%= link_to 'Back', survey_responses_path(@survey) %>
+
+<% else %>
+
+<h1><%=h @survey.title %></h1>
+<p><%=h @survey.thank_you_message %></p>
+
+<% end %>
+
+

@@ -1,0 +1,37 @@
+<h1><%= @survey.title %></h1>
+   
+   <p><%= @survey.introduction %></p>
+   
+  <% if !@response.errors.blank? %>
+    <div class="errorExplanation" id="errorExplanation">
+   	  <h2>There was a problem processing your response</h2>
+      <% for answer in @response.answers %>
+        <% if !answer.errors.blank? %>
+	      <p><%= answer.question.title %>
+	      <% for message in answer.errors["answer"] %>
+		    <%= message %>
+		  <% end %>
+		  </p>
+        <% end %>
+	  <% end %>
+	</div>
+  <% end %>
+
+<% form_for([@survey, @response]) do |f| %>
+
+  <% if @token %>
+    <%= hidden_field_tag 'token', @token %>
+  <% end %>
+
+  <% for @question in @survey.questions %>
+    <% div_for(@question, :class => @question.type) do %>
+      <%= render :partial => @question.partial %>
+	<% end %>
+  <% end %>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', survey_responses_path(@survey) %>

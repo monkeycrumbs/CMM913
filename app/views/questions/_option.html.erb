@@ -1,0 +1,8 @@
+<div class="option">
+  <% fields_for_option(option) do |option_form| %>
+  <p>
+    <label>Option: </label><%= option_form.text_field :label %>
+    <%= link_to_function "remove", "$(this).up('.option').remove()" %>
+  </p>
+  <% end %>
+</div>

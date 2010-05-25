@@ -1,0 +1,42 @@
+<h2>Listing invitations</h2>
+
+<ul id="actions">
+  <li><%= link_to 'New invitation', new_survey_invitation_path(@survey) %></li>
+  <li><%= link_to 'Send Invitations', invite_survey_invitations_path(@survey) %></li>
+  <li><%= link_to 'Follow up on invitations', follow_up_survey_invitations_path(@survey) %></li>
+</ul>
+<p>The send invitations link will send an email to all email addresses who have not responded.
+The follow up on invitations will send an email reminding those who have been invited but not yes responded.
+ Remember to give people enough time to respond to the first invitation before following up.</p>
+ 
+<table>
+  <tr class="thead">
+    <th>Email</th>
+    <th>Token</th>
+	<th>URL</th>
+	<th>Response</th>
+	<th>Mail sent</th>
+	<th>Follow up sent</th>
+	<th></th>
+	<th></th>
+	<th></th>
+  </tr>
+
+<% for invitation in @invitations %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%=h invitation.email %></td>
+    <td><%=h invitation.token %></td>
+	<td><%= link_to 'link', new_survey_response_path(@survey, :token => invitation.token ) %>
+	<td><%=h invitation.response %></td>
+	<td><%=h invitation.mail_sent %></td>
+	<td><%=h invitation.follow_up_sent %></td>
+    <td><%= link_to 'Show', survey_invitation_path(@survey, invitation) %></td>
+    <td><%= link_to 'Edit', edit_survey_invitation_path(@survey, invitation) %></td>
+    <td><%= link_to 'Destroy', survey_invitation_path(@survey, invitation), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New invitation', new_survey_invitation_path(@survey) %>

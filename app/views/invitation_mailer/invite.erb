@@ -1,0 +1,5 @@
+You have been invited to take part in a survey: <%= @invitation.survey.title %>
+
+To take part just click on the following link, or cut and paste into your browser:
+
+<%= new_survey_response_url( @invitation.survey, :token => @invitation.token ) %>

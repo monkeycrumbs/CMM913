@@ -1,0 +1,46 @@
+<p>
+  <b>Title:</b>
+  <%=h @question.title %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @question.questionType.name %>
+</p>
+
+<p>
+	<b>Help text:</b>
+	<%=h @question.help_text %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @question.position %>
+</p>
+
+<p>
+  <b>Mandatory</b>
+  <%=h @question.mandatory %>
+</p>
+
+<div class="section">
+	<h2>Preview</h2>
+	<div class="section_content">
+  	  <% div_for(@question, :class => @question.type) do %>
+	    <%= render :partial => @question.partial %>
+	  <% end %>
+	</div>
+</div>
+
+<% if !['text', 'textarea', 'country', 'date', 'number'].include? @question.type %>
+<div class="section">
+	<h2>Options</h2>
+	<div class="section_content">
+	  <% @options = @question.options %>
+	  <%= render :partial => 'options/options' %>
+	</div>
+</div>
+<% end %>
+
+<%= link_to 'Edit', edit_survey_question_path(@survey, @question) %> |
+<%= link_to 'Back', survey_path(@survey) %>

@@ -1,0 +1,9 @@
+<h2>Editing survey</h2>
+
+<% form_for(@survey) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p><%= f.submit "Update" %></p>
+<% end %>
+
+<%= link_to 'Show', @survey %> |
+<%= link_to 'Back', surveys_path %>

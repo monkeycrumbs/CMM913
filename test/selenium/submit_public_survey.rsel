@@ -1,0 +1,7 @@
+    open "/logout"
+    open "/surveys/1044205329/responses/new"
+    click "response_submit"
+    wait_for_page_to_load "30000"
+    assert_text_present "Response was successfully created."
+    assert_text_present "Public Survey"
+    assert_text_present "Thanks for participating"

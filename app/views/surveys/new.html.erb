@@ -1,0 +1,30 @@
+<h1>New survey</h1>
+<div id="left_column">
+<ul id="actions">
+  <li><%= link_to 'Back', surveys_path %></li>
+</ul>
+<% form_for(@survey) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+  <p><%= f.submit "Create" %></p>
+<% end %>
+
+<%= link_to 'Back', surveys_path %>
+</div>
+<div id="right_column">
+  <h2>Survey Types </h2>
+  <h3>Public</h3>
+  <p>A requires no authentication and allows respondents to respond to the survey as may times as they
+  wish.</p>
+  <h3>Invitation</h3>
+  <p>Invitation surveys enable you to invite respondents from a list of email addresses. You must add 
+  an invitation for each respondent you wish to take part in the survey. An invitation will be sent
+  to the respondent with a unique token to access the survey URL. Once the respondent has successfully
+  completed the survey the token will no longer be valid. Invitations are not linked to the responses to 
+  anonymity is preserved</p>
+  <h3>Private</h3>
+  <p>A private survey requires that a valid username and password must be given in order to access
+  the survey. This can be used to survey a closed user group or to ensure that respondents give
+  a valid email address to authenticate their account.</p>
+  <h4>IP Address</h4>
+  <p>The IP address of each respondent is stored.</p>
+</div>

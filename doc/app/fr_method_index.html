@@ -1,0 +1,153 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/AuthenticatedSystem.html#M000115">access_denied (AuthenticatedSystem)</a><br />
+    <a href="classes/QuestionsHelper.html#M000102">add_option_link (QuestionsHelper)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000111">admin? (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000114">admin_access_denied (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000113">admin_required (AuthenticatedSystem)</a><br />
+    <a href="classes/Question.html#M000060">answer_mean (Question)</a><br />
+    <a href="classes/Question.html#M000061">answer_median (Question)</a><br />
+    <a href="classes/Question.html#M000062">answer_mode (Question)</a><br />
+    <a href="classes/Question.html#M000059">answer_total (Question)</a><br />
+    <a href="classes/Question.html#M000058">answers_with_count (Question)</a><br />
+    <a href="classes/User.html#M000030">authenticate (User)</a><br />
+    <a href="classes/User.html#M000033">authenticated? (User)</a><br />
+    <a href="classes/AuthenticatedTestHelper.html#M000106">authorize_as (AuthenticatedTestHelper)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000110">authorized? (AuthenticatedSystem)</a><br />
+    <a href="classes/Survey.html#M000042">check_token (Survey)</a><br />
+    <a href="classes/Answer.html#M000014">confirmation? (Answer)</a><br />
+    <a href="classes/QuestionsController.html#M000019">create (QuestionsController)</a><br />
+    <a href="classes/InvitationsController.html#M000007">create (InvitationsController)</a><br />
+    <a href="classes/AnswersController.html#M000070">create (AnswersController)</a><br />
+    <a href="classes/SurveysController.html#M000093">create (SurveysController)</a><br />
+    <a href="classes/ResponsesController.html#M000077">create (ResponsesController)</a><br />
+    <a href="classes/UsersController.html#M000052">create (UsersController)</a><br />
+    <a href="classes/OptionsController.html#M000084">create (OptionsController)</a><br />
+    <a href="classes/SessionsController.html#M000026">create (SessionsController)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000108">current_user (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000109">current_user= (AuthenticatedSystem)</a><br />
+    <a href="classes/SessionsController.html#M000027">destroy (SessionsController)</a><br />
+    <a href="classes/OptionsController.html#M000086">destroy (OptionsController)</a><br />
+    <a href="classes/UsersController.html#M000053">destroy (UsersController)</a><br />
+    <a href="classes/ResponsesController.html#M000079">destroy (ResponsesController)</a><br />
+    <a href="classes/AnswersController.html#M000072">destroy (AnswersController)</a><br />
+    <a href="classes/QuestionsController.html#M000021">destroy (QuestionsController)</a><br />
+    <a href="classes/InvitationsController.html#M000009">destroy (InvitationsController)</a><br />
+    <a href="classes/SurveysController.html#M000095">destroy (SurveysController)</a><br />
+    <a href="classes/QuestionsController.html#M000023">down (QuestionsController)</a><br />
+    <a href="classes/OptionsController.html#M000088">down (OptionsController)</a><br />
+    <a href="classes/OptionsController.html#M000083">edit (OptionsController)</a><br />
+    <a href="classes/UsersController.html#M000050">edit (UsersController)</a><br />
+    <a href="classes/SurveysController.html#M000092">edit (SurveysController)</a><br />
+    <a href="classes/InvitationsController.html#M000006">edit (InvitationsController)</a><br />
+    <a href="classes/QuestionsController.html#M000018">edit (QuestionsController)</a><br />
+    <a href="classes/AnswersController.html#M000069">edit (AnswersController)</a><br />
+    <a href="classes/ResponsesController.html#M000076">edit (ResponsesController)</a><br />
+    <a href="classes/User.html#M000032">encrypt (User)</a><br />
+    <a href="classes/User.html#M000031">encrypt (User)</a><br />
+    <a href="classes/User.html#M000039">encrypt_password (User)</a><br />
+    <a href="classes/Question.html#M000064">existing_option_attributes= (Question)</a><br />
+    <a href="classes/Survey.html#M000046">export_answers (Survey)</a><br />
+    <a href="classes/ResultController.html#M000028">export_data (ResultController)</a><br />
+    <a href="classes/QuestionsHelper.html#M000101">fields_for_option (QuestionsHelper)</a><br />
+    <a href="classes/InvitationMailer.html#M000002">follow_up (InvitationMailer)</a><br />
+    <a href="classes/InvitationsController.html#M000011">follow_up (InvitationsController)</a><br />
+    <a href="classes/User.html#M000038">forget_me (User)</a><br />
+    <a href="classes/ResultHelper.html#M000098">gruff_country_image (ResultHelper)</a><br />
+    <a href="classes/ResultHelper.html#M000100">gruff_likert_image (ResultHelper)</a><br />
+    <a href="classes/ResultHelper.html#M000097">gruff_option_image (ResultHelper)</a><br />
+    <a href="classes/ApplicationHelper.html#M000126">help_text (ApplicationHelper)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000118">included (AuthenticatedSystem)</a><br />
+    <a href="classes/ResponsesController.html#M000073">index (ResponsesController)</a><br />
+    <a href="classes/SurveysController.html#M000089">index (SurveysController)</a><br />
+    <a href="classes/QuestionsController.html#M000015">index (QuestionsController)</a><br />
+    <a href="classes/InvitationsController.html#M000003">index (InvitationsController)</a><br />
+    <a href="classes/OptionsController.html#M000080">index (OptionsController)</a><br />
+    <a href="classes/UsersController.html#M000047">index (UsersController)</a><br />
+    <a href="classes/AnswersController.html#M000066">index (AnswersController)</a><br />
+    <a href="classes/InvitationMailer.html#M000001">invite (InvitationMailer)</a><br />
+    <a href="classes/InvitationsController.html#M000010">invite (InvitationsController)</a><br />
+    <a href="classes/ApplicationHelper.html#M000124">label (ApplicationHelper)</a><br />
+    <a href="classes/Question.html#M000054">label_id (Question)</a><br />
+    <a href="classes/ApplicationHelper.html#M000127">likert_labels (ApplicationHelper)</a><br />
+    <a href="classes/Question.html#M000057">list_answers (Question)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000107">logged_in? (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedTestHelper.html#M000105">login_as (AuthenticatedTestHelper)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000120">login_from_basic_auth (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000121">login_from_cookie (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000119">login_from_session (AuthenticatedSystem)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000112">login_required (AuthenticatedSystem)</a><br />
+    <a href="classes/Answer.html#M000012">mandatory? (Answer)</a><br />
+    <a href="classes/ApplicationHelper.html#M000125">move_image (ApplicationHelper)</a><br />
+    <a href="classes/InvitationsController.html#M000005">new (InvitationsController)</a><br />
+    <a href="classes/UsersController.html#M000049">new (UsersController)</a><br />
+    <a href="classes/SurveysController.html#M000091">new (SurveysController)</a><br />
+    <a href="classes/QuestionsController.html#M000017">new (QuestionsController)</a><br />
+    <a href="classes/ResponsesController.html#M000075">new (ResponsesController)</a><br />
+    <a href="classes/AnswersController.html#M000068">new (AnswersController)</a><br />
+    <a href="classes/SessionsController.html#M000025">new (SessionsController)</a><br />
+    <a href="classes/OptionsController.html#M000082">new (OptionsController)</a><br />
+    <a href="classes/Question.html#M000063">new_option_attributes= (Question)</a><br />
+    <a href="classes/ApplicationHelper.html#M000123">number (ApplicationHelper)</a><br />
+    <a href="classes/Answer.html#M000013">number? (Answer)</a><br />
+    <a href="classes/QuestionsHelper.html#M000103">option_fields (QuestionsHelper)</a><br />
+    <a href="classes/Question.html#M000056">partial (Question)</a><br />
+    <a href="classes/User.html#M000040">password_required? (User)</a><br />
+    <a href="classes/ResultHelper.html#M000099">percentage (ResultHelper)</a><br />
+    <a href="classes/SurveysController.html#M000096">preview (SurveysController)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000117">redirect_back_or_default (AuthenticatedSystem)</a><br />
+    <a href="classes/User.html#M000035">remember_me (User)</a><br />
+    <a href="classes/User.html#M000036">remember_me_for (User)</a><br />
+    <a href="classes/User.html#M000037">remember_me_until (User)</a><br />
+    <a href="classes/User.html#M000034">remember_token? (User)</a><br />
+    <a href="classes/ApplicationHelper.html#M000122">required (ApplicationHelper)</a><br />
+    <a href="classes/Question.html#M000065">save_options (Question)</a><br />
+    <a href="classes/Survey.html#M000045">send_follow_up (Survey)</a><br />
+    <a href="classes/Survey.html#M000044">send_invitations (Survey)</a><br />
+    <a href="classes/Invitation.html#M000024">set_token (Invitation)</a><br />
+    <a href="classes/AnswersController.html#M000067">show (AnswersController)</a><br />
+    <a href="classes/ResponsesController.html#M000074">show (ResponsesController)</a><br />
+    <a href="classes/ResultController.html#M000029">show (ResultController)</a><br />
+    <a href="classes/InvitationsController.html#M000004">show (InvitationsController)</a><br />
+    <a href="classes/QuestionsController.html#M000016">show (QuestionsController)</a><br />
+    <a href="classes/UsersController.html#M000048">show (UsersController)</a><br />
+    <a href="classes/OptionsController.html#M000081">show (OptionsController)</a><br />
+    <a href="classes/SurveysController.html#M000090">show (SurveysController)</a><br />
+    <a href="classes/SurveysHelper.html#M000104">status (SurveysHelper)</a><br />
+    <a href="classes/Survey.html#M000041">status (Survey)</a><br />
+    <a href="classes/AuthenticatedSystem.html#M000116">store_location (AuthenticatedSystem)</a><br />
+    <a href="classes/Question.html#M000055">type (Question)</a><br />
+    <a href="classes/OptionsController.html#M000087">up (OptionsController)</a><br />
+    <a href="classes/QuestionsController.html#M000022">up (QuestionsController)</a><br />
+    <a href="classes/OptionsController.html#M000085">update (OptionsController)</a><br />
+    <a href="classes/UsersController.html#M000051">update (UsersController)</a><br />
+    <a href="classes/ResponsesController.html#M000078">update (ResponsesController)</a><br />
+    <a href="classes/QuestionsController.html#M000020">update (QuestionsController)</a><br />
+    <a href="classes/InvitationsController.html#M000008">update (InvitationsController)</a><br />
+    <a href="classes/SurveysController.html#M000094">update (SurveysController)</a><br />
+    <a href="classes/AnswersController.html#M000071">update (AnswersController)</a><br />
+    <a href="classes/Survey.html#M000043">update_invitation (Survey)</a><br />
+  </div>
+</div>
+</body>
+</html>

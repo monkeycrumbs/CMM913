@@ -1,0 +1,41 @@
+<h1>Listing surveys</h1>
+<ul id="actions">
+  <li><%= link_to 'New survey', new_survey_path %></li>
+</ul>
+
+
+<table>
+  <tr class="thead">
+    <th>Title</th>
+    <th>Introduction</th>
+    <th>Starts at</th>
+    <th>Ends at</th>
+    <th>Created by</th>
+    <th>Status</th>
+    <th>Type</th>
+    <th>Responses</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% for survey in @surveys %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%=h survey.title %></td>
+    <td><%=h truncate(survey.introduction, 100) %></td>
+    <td><%=h survey.starts_at.to_date %></td>
+    <td><%=h survey.ends_at.to_date %></td>
+    <td><%= link_to survey.user.login, user_path(survey.user) %></td>
+    <td><%= status(survey) %></td>
+    <td><%= survey.survey_type.name %></td>
+    <td><%= survey.responses.count %></td>
+    <td><%= link_to 'Show', survey %></td>
+    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+    <td><%= link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New survey', new_survey_path %>

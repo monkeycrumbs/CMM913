@@ -1,0 +1,4 @@
+open '/'
+type 'login', login
+type 'password', password
+click 'commit'

@@ -1,0 +1,9 @@
+<fieldset>
+  <legend><%= @question.title %></legend>
+  <%= label %>
+  <%= help_text %>
+  <% @question.options.each do |option| %>
+    <%= check_box("#{@question.label_id}_", option.id ) %>
+	<%= content_tag('label', option.label, :for => "#{@question.label_id}_#{option.id}" ) %><br />
+  <% end %>
+</fieldset>

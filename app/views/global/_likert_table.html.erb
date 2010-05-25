@@ -1,0 +1,19 @@
+<label><%= number+@question.title -%></label>
+  <%= help_text %>
+  <table>
+  	<tr>
+  	  <th></th>
+  	  <% likert_labels.each do |label| %>
+	    <th><%= label %></th>
+	  <% end %>
+	</tr>
+	<tr>
+      <% @question.options.each do |option| %>
+        <th><%= option.label %></th>
+        <% ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'].each do |label| %>
+	      <% tick = label == 'Neutral' ? true : false %>
+          <td><%= radio_button_tag("#{@question.label_id}[#{option.id}]", label, checked = tick ) %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  </table>

@@ -1,0 +1,84 @@
+one:
+  answer: MyString
+  question: string
+  response: one
+  active: false
+
+two:
+  answer: MyString
+  question: string
+  response: one
+  active: false
+
+required:
+  answer: MyString
+  question: string_required
+  response: one
+  active: false
+  
+textarea_answer:
+  answer: textarea answer
+  question: textarea
+  response: one
+  active: false
+
+date_answer:
+  answer: 2008-07-06
+  question: date
+  response: one
+  active: false
+
+country_answer:
+  answer: Afghanistan
+  question: country
+  response: one
+  active: false
+
+checkbox_one_answer:
+  answer: 1
+  question: checkbox
+  response: one
+  active: false
+  option: checkbox_one
+
+checkbox_two_answer:
+  answer: 1
+  question: checkbox
+  response: one
+  active: false
+  option: checkbox_two
+
+radio_answer:
+  answer: radio one
+  question: radio
+  response: one
+  active: false
+  option: radio_one
+ 
+select_answer:
+  answer: select one
+  question: select
+  response: one
+  active: false
+  option: select_one
+
+likert_one_answer:
+  answer: Neutral
+  question: likert
+  response: one
+  active: false
+  option: likert_one
+ 
+likert_two_answer:
+  answer: Neutral
+  question: likert
+  response: one
+  active: false
+  option: likert_two
+  
+number_answer:
+  answer: 100
+  question: number
+  response: one
+  active: false
+  

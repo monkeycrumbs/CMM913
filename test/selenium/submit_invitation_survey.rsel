@@ -1,0 +1,11 @@
+    open "/logout"
+    open "/surveys/24750291/responses/new?token=25491b290d19ef4938e97a43272b750a37f4d843"
+    click "response_submit"
+    wait_for_page_to_load "30000"
+    assert_text_present "Response was successfully created."
+    assert_text_present "Invitation Survey"
+    assert_text_present "Thanks for participating"
+    # check that tokens cannot be used twice
+    open "/surveys/24750291/responses/new?token=25491b290d19ef4938e97a43272b750a37f4d843"
+    assert_text_present "The survey requires a valid token."
+    assert_text_present "This token you have provided in invalid. Please contact webmaster@localhost for further information."

@@ -1,0 +1,5 @@
+open "/logout"
+open "/surveys/492774626/responses/new"
+wait_for_page_to_load "30000"
+assert_text_present "The survey is closed."
+assert_text_present "This survey is closed. Please contact webmaster@localhost for further information."

@@ -1,0 +1,39 @@
+<%= error_messages_for :survey %>
+
+  <p>
+    <b>Title</b><br />
+	<span class="info">Give your Survey a title </span>
+    <%= f.text_field :title, :size => 70 %>
+  </p>
+  
+  <p>
+    <b>Type</b><br />
+	<%= content_tag('span', 'Your survey can be available through invitation, through a public url or through sign up', :class => 'info') %>
+    <%= f.collection_select( :survey_type_id, @surveyTypes, :id, :name) %>
+  </p>
+
+  <p>
+    <b>Introduction</b><br />
+	<%= content_tag('span', 'This is displayed at the start of the survey', :class => 'info') %>
+    <%= f.text_area :introduction, :size => '50x10' %>
+  </p>
+  
+  <p>
+    <b>Thank you message</b><br />
+	<%= content_tag('span', 'This is displayed after the survey has been completed', :class => 'info') %>
+    <%= f.text_area :thank_you_message, :size => '50x10' %>
+  </p>
+
+  <fieldset>
+  	<legend>Schedule survey</legend>
+	<%= content_tag('span', 'Your survey will be available between the following times', :class => 'info') %>
+	<p>
+	  <b>Starts at</b><br />
+	  <%= f.datetime_select :starts_at %>
+	</p>
+	
+	<p>
+	  <b>Ends at</b><br />
+	  <%= f.datetime_select :ends_at %>
+	</p>
+  </fieldset>

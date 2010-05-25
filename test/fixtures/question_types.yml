@@ -1,0 +1,44 @@
+text:
+  id: 1
+  name: text
+  description: Allows the respondent to type in free text.
+  
+textarea:
+  id: 2
+  name: textarea
+  description: Allows the respondent to type in free text.
+  
+radio:
+  id: 3
+  name: radio
+  description: Allows the respondent to select exactly one choice from a list.
+  
+select:
+  id: 4
+  name: select
+  description: Respondents can select exactly one answer from a drop down menu.
+  
+checkbox:
+  id: 5
+  name: checkbox
+  description: Respondents are permitted to select more than one option from a list.
+  
+date:
+  id: 6
+  name: date
+  description: Respondents can select a data by using a day,month and year drop down menu.
+
+country:
+  id: 7
+  name: country
+  description: Respondents can select a country from a pre populated drop down menu.
+
+likert:
+  id: 8
+  name: likert
+  description: Respondents can specify their level of agreement to statement.
+
+number:
+  id: 9
+  name: number
+  description: Respondents can specify a numeric answer which can be further analysed.

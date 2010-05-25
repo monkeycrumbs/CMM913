@@ -1,0 +1,14 @@
+<h2>Editing question</h2>
+
+<%= error_messages_for :question %>
+
+<% form_for([@survey, @question]) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', survey_question_path(@survey, @question) %> |
+<%= link_to 'Back', survey_path(@survey) %>

@@ -1,0 +1,44 @@
+survey_one:
+  title: Test Survey One
+  introduction: MyText
+  thank_you_message: Thanks for participating
+  starts_at: 2008-03-12 14:42:20
+  ends_at: <%= 6.months.from_now.to_s(:db) %>
+  created_by: 1
+  survey_type: public
+
+closed:
+  title: Closed Survey
+  introduction: MyText
+  thank_you_message: Thanks for participating
+  starts_at: 2008-03-12 14:42:20
+  ends_at: <%= 3.days.ago.to_s(:db) %>
+  created_by: 1
+  survey_type: public
+
+public:
+  title: Public Survey
+  introduction: Welcome to the public survey
+  thank_you_message: Thanks for participating
+  starts_at: <%= 1.day.ago.to_s(:db) %>
+  ends_at: <%= 3.months.from_now.to_s(:db) %>
+  created_by: 1
+  survey_type: public
+
+private:
+  title: Private Survey
+  introduction: Welcome to the private survey
+  thank_you_message: Thanks for participating
+  starts_at: <%= 1.day.ago.to_s(:db) %>
+  ends_at: <%= 3.months.from_now.to_s(:db) %>
+  created_by: 1
+  survey_type: private
+
+invitation:
+  title: Invitation Survey
+  introduction: Welcome to the invitation survey
+  thank_you_message: Thanks for participating
+  starts_at: <%= 1.day.ago.to_s(:db) %>
+  ends_at: <%= 3.months.from_now.to_s(:db) %>
+  created_by: 1
+  survey_type: invitation

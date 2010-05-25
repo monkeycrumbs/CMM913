@@ -1,0 +1,6 @@
+<label class="radio"><%= number+@question.title -%></label>
+<%= help_text %>
+<% @question.options.each do |option| %>
+  <%= radio_button_tag("#{@question.label_id}[option]", option.label) %>
+  <%= content_tag('label', option.label, :for => "#{@question.label_id}_option_#{option.label.downcase.gsub(" ", "_")}" ) %>
+<% end %>

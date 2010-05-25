@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README_FOR_APP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README_FOR_APP</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>doc/README_FOR_APP
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Sat Jul 19 11:24:32 +0200 2008</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Use this README file to introduce your application and point to useful
+places in the API for learning more. Run &quot;rake doc:app&quot; to
+generate API documentation for your models, controllers, helpers, and
+libraries.
+</p>
+<p>
+Required Gems
+</p>
+<ul>
+<li>Install RMagick
+
+</li>
+</ul>
+<p>
+** Windows
+</p>
+<p>
+Download rmagick to temporary folder - <a
+href="http://rubyforge.org/frs/download.php/38052/RMagick-2.5.0-ImageMagick-6.4.1-5-Q8.zip">rubyforge.org/frs/download.php/38052/RMagick-2.5.0-ImageMagick-6.4.1-5-Q8.zip</a>
+</p>
+<p>
+Double-click the ImageMagick installer
+(ImageMagick-6.4.1-5-Q8-windows-dll.exe) found in the temporary directory.
+The only option that you need to choose from the installation options is
+&quot;Update executable search path.&quot; The other options are up to you.
+Do not use any other version of ImageMagick. RMagick will not run if you
+install any other version of ImageMagick.
+</p>
+<p>
+Make sure RubyGems is up-to-date. If you are using an older version, update
+it now. Enter the command
+</p>
+<pre>
+    * gem update --system
+</pre>
+<p>
+Installing the gem is very simple. Start a Command Prompt window. Use the
+chdir command to make the temporary directory that contains the unzipped
+files the current directory. Enter this command:
+</p>
+<pre>
+    * gem install rmagick --local
+</pre>
+<p>
+You should see:
+</p>
+<pre>
+    * Successfully installed rmagick, version 2.5.0-x86-mswin32
+</pre>
+<ul>
+<li>Install Gruff
+
+</li>
+</ul>
+<p>
+gem install gruff
+</p>
+<ul>
+<li>Install fastercsv
+
+</li>
+</ul>
+<p>
+gem install fastercsv
+</p>
+<ul>
+<li>Install Selenium
+
+<pre>
+ 1. Install Selenium on Rails: script/plugin install http://svn.openqa.org/svn/selenium-on-rails/selenium-on-rails
+ 2. If you‘re on Windows, gem install win32-open3
+ 3. If the RedCloth gem is available the Selenese test cases can use it for better markup.
+ 4. Run the Rakefile in the plugin‘s directory to run the tests in order to see that everything works. (If RedCloth isn‘t installed a few tests will fail since they assume RedCloth is installed.)
+ 5. Create a test case: script/generate selenium login
+ 6. Start the server: script/server -e test
+ 7. Point your browser to localhost:3000/selenium
+ 8. If everything works as expected you should see the Selenium test runner. The north east frame contains all your test cases (just one for now), and the north frame contains your test case.
+</pre>
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

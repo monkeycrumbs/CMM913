@@ -1,0 +1,10 @@
+invitation_one:
+  token: 5afa71bd0b643d6a2d83f9979c9ee8f2143b6b83
+  survey: demo_survey
+  id: 1
+  email: test@example.com
+invitation_two:
+  token: 8395fa8386cbc0a33d76505d1d5c6a9a6e5ae448
+  survey: demo_survey
+  id: 2
+  email: test2@example.com

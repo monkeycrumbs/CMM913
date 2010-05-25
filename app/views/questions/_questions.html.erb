@@ -1,0 +1,32 @@
+<table>
+  <tr class="thead">
+    <th>Title</th>
+    <th>Type</th>
+    <th>Position</th>
+	<th>Move</th>
+	<th>Mandatory</th>
+	<th></th>
+	<th></th>
+	<th></th>
+  </tr>
+<% session[:return_to] = request.request_uri %>
+<% for question in @questions %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%=h question.title %></td>
+    <td><%=h question.questionType.name %></td>
+    <td><%=h question.position %></td>
+	<td>
+	  <%= link_to move_image('up'), up_survey_question_path(@survey, question), :method => :post unless @questions.first.position == question.position %>
+	  <%= link_to move_image('down'), down_survey_question_path(@survey, question), :method => :post unless @questions.last.position == question.position %>
+	</td>
+	<td><%=h question.mandatory %></td>
+    <td><%= link_to 'Show', survey_question_path(@survey, question) %></td>
+    <td><%= link_to 'Edit', edit_survey_question_path(@survey, question) %></td>
+    <td><%= link_to 'Destroy', survey_question_path(@survey, question), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add', new_survey_question_path(@survey) %>

@@ -1,0 +1,39 @@
+checkbox_one:
+  label: MyString
+  question: checkbox
+  position: 1
+
+checkbox_two:
+  label: MyString
+  question: checkbox
+  position: 2
+
+radio_one:
+  label: radio one
+  question: radio
+  position: 1
+
+radio_two:
+  label: radio two
+  question: radio
+  position: 2
+
+select_one: 
+  label: select one
+  question: select
+  position: 1
+
+select_two: 
+  label: select two
+  question: select
+  position: 2
+  
+likert_one:
+  label: likert one
+  question: likert
+  position: 1
+  
+likert_two:
+  label: likert two
+  question: likert
+  position: 2

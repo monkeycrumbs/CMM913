@@ -1,0 +1,29 @@
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title, :size => 70 %>
+  </p>
+
+  <p>
+    <b>Type</b><br />
+    <%= collection_select(:question, :type_id, @questionTypes, :id, :name, {}, { :onchange => "optionDisplay(this.options[selectedIndex].text);"}) %>
+  </p>
+  
+  <p>
+  	<b>Mandatory</b><br />
+	<%= f.check_box :mandatory %>
+  </p>
+  
+  <p>
+  	<b>Help Text</b><br />
+	<span class="info">This is an example of help text</span>
+	<%= f.text_area :help_text, :size => "40x5" %>
+  </p>
+  
+  <div class="section" id="option_section" <%= option_fields %> >
+    <div id="options">
+      <h3>Options</h3>
+	  <span class="info">Add options for select drop downs, radio buttons, checkboxes and likert questions</span>
+      <%= render :partial => 'option', :collection => @question.options %>
+    </div>
+    <p><%= add_option_link "Add an option" %></p>
+  </div>

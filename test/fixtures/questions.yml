@@ -1,0 +1,79 @@
+string:
+  title: MyString
+  type_id: 1
+  survey: survey_one
+  help_text: Help text one
+  position: 1
+  mandatory: false
+
+string_required:
+  title: MyString
+  type_id: 1
+  survey: survey_one
+  help_text: Help text two
+  position: 2
+  mandatory: true
+
+textarea:
+  title: textarea
+  type_id: 2
+  survey: survey_one
+  help_text: textarea help text
+  position: 3
+  mandatory: false
+
+date:
+  title: date
+  type_id: 6
+  survey: survey_one
+  help_text: date help text
+  position: 4
+  mandatory: false
+
+country:
+  title: country
+  type_id: 7
+  survey: survey_one
+  help_text: country help text
+  position: 5
+  mandatory: false
+
+checkbox:
+  title: checkbox
+  type_id: 5
+  survey: survey_one
+  help_text: checkbox help text
+  position: 6
+  mandatory: false
+  
+radio:
+  title: radio
+  type_id: 3
+  survey: survey_one
+  help_text: radio help text
+  position: 7
+  mandatory: false
+  
+select:
+  title: select
+  type_id: 4
+  survey: survey_one
+  help_text: select help text
+  position: 8
+  mandatory: false
+
+likert:
+  title: likert
+  type_id: 8
+  survey: survey_one
+  help_text: likert help text
+  position: 9
+  mandatory: false
+
+number:
+  title: number
+  type_id: 9
+  survey: survey_one
+  help_text: number help text
+  position: 10
+  mandatory: false

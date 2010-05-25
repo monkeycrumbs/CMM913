@@ -1,0 +1,33 @@
+<p>
+  <b>Email:</b>
+  <%=h @invitation.email %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%=h @invitation.token %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%=h @invitation.response %>
+</p>
+
+<p>
+  <b>URL:</b>
+  <%=link_to url = new_survey_response_url( @survey, :token => @invitation.token ), url %>
+</p>
+
+<p>
+  <b>Mail sent:</b>
+  <%=h @invitation.mail_sent %>
+</p>
+
+<p>
+  <b>Follow up sent</b>
+  <%=h @invitation.follow_up_sent %>
+</p>  
+
+
+<%= link_to 'Edit', edit_survey_invitation_path(@survey, @invitation) %> |
+<%= link_to 'Back', survey_invitations_path(@survey) %>

@@ -1,0 +1,11 @@
+one:
+  email: test@test.com
+  survey: invitation
+  token: 25491b290d19ef4938e97a43272b750a37f4d843
+  response: false
+
+two:
+  email: example@example.com
+  survey: invitation
+  token: MyString
+  response: false

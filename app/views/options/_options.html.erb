@@ -1,0 +1,28 @@
+<table>
+  <tr class="thead">
+    <th>Label</th>
+    <th>Question</th>
+	<th>Position</th>
+	<th></th>
+	<th></th>
+	<th></th>
+  </tr>
+<% session[:return_to] = request.request_uri %>
+<% for option in @options %>
+  <tr class="<%= cycle("odd", "even") %>" >
+    <td><%=h option.label %></td>
+    <td><%=h option.question_id %></td>
+	<td>
+	  <%= link_to move_image('up'), up_question_option_path(@question, option), :method => :post unless @options.first.position == option.position %>
+	  <%= link_to move_image('down'), down_question_option_path(@question, option), :method => :post unless @options.last.position == option.position %>
+	</td>
+    <td><%= link_to 'Show', question_option_path(@question, option) %></td>
+    <td><%= link_to 'Edit', edit_question_option_path(@question, option) %></td>
+    <td><%= link_to 'Destroy', question_option_path(@question, option), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New option', new_question_option_path(@question) %>

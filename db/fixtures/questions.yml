@@ -1,0 +1,61 @@
+question_one:
+  title: Name
+  help_text: Please enter your first and last name
+  survey: demo_survey
+  type_id: 1
+  id: 1
+  position: 1
+question_two:
+  title: Address
+  help_text: Please give your full address
+  survey: demo_survey
+  type_id: 2
+  id: 2
+  position: 2
+question_three:
+  title: Country of Residence
+  help_text: Please tell us where you currently live
+  survey: demo_survey
+  type_id: 7
+  id: 3
+  position: 3
+question_four:
+  id: 4
+  title: Employment Status
+  type_id: 4
+  survey: demo_survey
+  position: 4
+  help_text: What is your current employment status?
+question_five:
+  id: 5
+  title: Are you male or female?
+  type_id: 3
+  survey: demo_survey
+  position: 5
+  help_text: 
+question_six: 
+  id: 6
+  title: What is your age?
+  type_id: 9
+  survey: demo_survey
+  position: 6
+  help_text: Please enter a number
+question_seven:
+  id: 7
+  title: What is your current marital status
+  type_id: 3
+  survey: demo_survey
+  position: 7
+question_eight:
+  id: 8
+  title: Which of these activities do you participate in
+  type_id: 5
+  survey: demo_survey
+  position: 8
+  help_text: Check all that apply
+question_nine:
+  id: 9
+  title: Do you agree or disagree with following statements?
+  type_id: 8
+  survey: demo_survey
+  position: 9

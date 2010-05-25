@@ -1,0 +1,15 @@
+setup
+include_partial 'login', :login => 'tino', :password => 'test'
+open '/surveys'
+click 'link=New survey'
+wait_for_page_to_load "30000"
+type 'survey_title', 'Test Title'
+type 'survey_introduction', 'My introduction'
+type "survey_thank_you_message", "Thank you for participating"
+select "survey_ends_at_2i", "label=September"
+click "survey_submit"
+wait_for_page_to_load "30000"
+assert_text "notice", "Survey was successfully created."
+assert_text_present 'Test Title'
+assert_text_present 'My introduction'
+assert_text_present 'Thank you for participating'

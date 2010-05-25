@@ -1,0 +1,13 @@
+open "/logout"
+open "/surveys/291613017/responses/new"
+assert_text_present "Login required"
+type 'login', 'aaron'
+type 'password', 'test'
+click 'commit'
+wait_for_page_to_load "30000"
+assert_text_present "Logged in successfully"
+assert_text_present "Welcome to the private survey"
+click "response_submit"
+wait_for_page_to_load "30000"
+assert_text_present "Response was successfully created."
+assert_text_present "Thanks for participating"

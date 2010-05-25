@@ -1,0 +1,25 @@
+<h2>Answer #<%= @answer.id %></h2>
+
+<p>
+  <b>Answer:</b>
+  <%=h @answer.answer %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%=h @answer.question_id %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%=h @answer.response_id %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @answer.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_answer_path(@question, @answer) %> |
+<%= link_to 'Back', question_answers_path(@question) %>

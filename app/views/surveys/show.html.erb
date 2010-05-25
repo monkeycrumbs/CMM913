@@ -1,0 +1,75 @@
+<div id="left_column">
+<div class="section">
+	
+  <%= link_to 'Edit', edit_survey_path(@survey), :class => "section_link" %>
+  <h2>Survey Details</h2>
+
+  <div class="section_content">
+	<p>
+	  <b>Title:</b>
+	  <%=h @survey.title %>
+	</p>
+	
+	<p>
+	  <b>Type:</b>
+	  <%=h @survey.survey_type.name %>
+	</p>
+	
+	<p>
+	  <b>Status:</b>
+	  <%=h @survey.status %>
+	</p>
+	
+	<p>
+	  <b>Introduction:</b>
+	  <%=h @survey.introduction %>
+	</p>
+	
+	<p>
+	  <b>Thank you message:</b>
+	  <%=h @survey.thank_you_message %>
+	</p>
+	
+	<p>
+	  <b>Starts at:</b>
+	  <%=h @survey.starts_at %>
+	</p>
+	
+	<p>
+	  <b>Ends at:</b>
+	  <%=h @survey.ends_at %>
+	</p>
+	
+	<p>
+	  <b>Created by:</b>
+	  <%= link_to @survey.user.login, user_path(@survey.user) %>
+	</p>
+  </div>
+</div>
+
+<div class="section">
+	<%= link_to 'Add', new_survey_question_path(@survey), :class => "section_link" %>
+	<h2>Questions</h2>
+	<div class="section_content">
+	  <% @questions = @survey.questions %>
+      <%= render :partial => 'questions/questions' %>
+	</div>
+</div>
+</div>
+<div id="right_column">
+<div class="section">
+    <h2>Preview</h2>
+	<div class="section_content">
+	    <% form_tag(preview_survey_path(@survey)) do %>
+		  <% for @question in @questions %>
+		    <% div_for(@question, :class => @question.type ) do %>
+	  	      <%= render :partial => @question.partial %>
+	        <% end %>
+	      <% end %>
+		  <div class="question">
+		    <%# submit_tag "Submit" %>
+		  </div>
+	    <% end %>
+	</div>
+</div>
+</div>

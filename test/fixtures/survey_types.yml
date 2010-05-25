@@ -1,0 +1,8 @@
+public:
+  name: Public
+
+private:
+  name: Private
+ 
+invitation:
+  name: Invitation

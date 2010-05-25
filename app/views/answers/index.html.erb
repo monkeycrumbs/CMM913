@@ -1,0 +1,29 @@
+<h2>Listing answers</h2>
+
+<table>
+  <tr class="thead">
+    <th>Answer</th>
+    <th>Question</th>
+    <th>Response</th>
+    <th>Active</th>
+	<th></th>
+	<th></th>
+	<th></th>
+  </tr>
+
+<% for answer in @answers %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%=h answer.answer %></td>
+    <td><%=h answer.question.title %></td>
+    <td><%=h answer.response_id %></td>
+    <td><%=h answer.active %></td>
+    <td><%= link_to 'Show', question_answer_path(@question, answer) %></td>
+    <td><%= link_to 'Edit', edit_question_answer_path(@question, answer) %></td>
+    <td><%= link_to 'Destroy', question_answer_path(@question, answer), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New answer', new_question_answer_path(@question) %>

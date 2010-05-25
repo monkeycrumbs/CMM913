@@ -1,0 +1,95 @@
+option_one:
+  id: 1
+  question_id: 4
+  label: Employed full time
+  position: 1
+option_two:
+  id: 2
+  question_id: 4
+  label: Employed part time
+  position: 2
+option_three:
+  id: 3
+  question_id: 4
+  label: Unemployed
+  position: 3
+option_four:
+  id: 4
+  question_id: 4
+  label: Retired
+  position: 4
+option_five:
+  id: 5
+  question_id: 5
+  label: Male
+  position: 1
+option_six:
+  id: 6
+  question_id: 5
+  label: Female
+  position: 2
+option_seven:
+  id: 7
+  question_id: 7
+  label: Single, never married
+  position: 1
+option_eight:
+  id: 8
+  question_id: 7
+  label: Married
+  position: 2
+option_nine:
+  id: 9
+  question_id: 7
+  label: Separated
+  position: 3
+option_ten:
+  id: 10
+  question_id: 7
+  label: Divorced
+  position: 4
+option_eleven:
+  id: 11
+  question_id: 7
+  label: Widowed
+  position: 5
+option_twelve:
+  id: 12
+  question_id: 8
+  label: Sport
+  position: 1
+option_thirteen:
+  id: 13
+  question_id: 8
+  label: The Arts
+  position: 2
+option_fourteen:
+  id: 14
+  question_id: 8
+  label: Literature
+  position: 3
+option_fiveteen:
+  id: 15
+  question_id: 8
+  label: Socialising
+  position: 4
+option_sixteen:
+  id: 16
+  question_id: 9
+  label: The survey meets your needs
+  position: 1
+option_seventeen:
+  id: 17
+  question_id: 9
+  label: A multi page survey is necessary
+  position: 2
+option_eighteen:
+  id: 18
+  question_id: 9
+  label: The survey administration is easy to use
+  position: 3
+option_nineteen:
+  id: 19
+  question_id: 9
+  label: The application is well documented
+  position: 4
